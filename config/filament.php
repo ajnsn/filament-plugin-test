@@ -1,5 +1,6 @@
 <?php
 
+use Acme\CustomPlugin\Resources\UserResource;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Filament\Http\Middleware\MirrorConfigToSubpackages;
@@ -122,7 +123,9 @@ return [
     'resources' => [
         'namespace' => 'App\\Filament\\Resources',
         'path' => app_path('Filament/Resources'),
-        'register' => [],
+        'register' => [
+            UserResource::class,
+        ],
     ],
 
     /*
