@@ -1,0 +1,22 @@
+{
+    "name": "acme/custom-plugin",
+    "require": {
+        "php": "^8.0.2",
+        "filament/filament": "^2.15",
+        "spatie/laravel-package-tools": "^1.11"
+    },
+    "autoload": {
+        "psr-4": {
+            "Acme\\CustomPlugin\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Acme\\CustomPlugin\\ServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

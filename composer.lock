@@ -4,8 +4,38 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a212d3e188a6d3f3044027955cc670cf",
+    "content-hash": "080af145ec887533f2a94fb7bdfc8bcb",
     "packages": [
+        {
+            "name": "acme/custom-plugin",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./packages/acme-custom-plugin",
+                "reference": "0270b745447aec5001649847adf09afca9753188"
+            },
+            "require": {
+                "filament/filament": "^2.15",
+                "php": "^8.0.2",
+                "spatie/laravel-package-tools": "^1.11"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Acme\\CustomPlugin\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Acme\\CustomPlugin\\": "src/"
+                }
+            },
+            "transport-options": {
+                "relative": true
+            }
+        },
         {
             "name": "akaunting/laravel-money",
             "version": "3.1.2",
@@ -8832,7 +8862,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "acme/custom-plugin": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
